@@ -22,7 +22,7 @@ public class Board {
 
     private String content;
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "board_category_id")
     private BoardCategory boardCategory;
 }

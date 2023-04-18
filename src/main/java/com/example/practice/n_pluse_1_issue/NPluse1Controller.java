@@ -15,8 +15,10 @@ public class NPluse1Controller {
     private final BoardRepository boardRepository;
 
     @GetMapping("/")
-    public void nPluse1Test() {
-        List<Board> boardList = boardRepository.findAll();
+    public void nPluse1Test() throws InterruptedException {
+        List<Board> boardList = boardRepository.getBoardList();
+        System.out.println("=== sleep ===");
+        Thread.sleep(2000);
         for(Board board : boardList) {
             System.out.println(board.getBoardCategory().getCategoryName());
         }
