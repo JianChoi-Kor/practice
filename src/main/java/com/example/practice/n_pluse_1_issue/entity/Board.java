@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Builder
 @AllArgsConstructor
@@ -22,7 +24,6 @@ public class Board {
 
     private String content;
 
-    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "board_category_id")
-    private BoardCategory boardCategory;
+    @OneToMany(mappedBy = "board", fetch = FetchType.EAGER)
+    private List<Comment> commentList = new ArrayList<>();
 }

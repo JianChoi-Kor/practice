@@ -1,7 +1,6 @@
 package com.example.practice.n_pluse_1_issue.repository;
 
 import static com.example.practice.n_pluse_1_issue.entity.QBoard.board;
-import static com.example.practice.n_pluse_1_issue.entity.QBoardCategory.boardCategory;
 
 import com.example.practice.n_pluse_1_issue.entity.Board;
 import com.querydsl.jpa.impl.JPAQuery;
@@ -16,11 +15,12 @@ public class BoardRepositoryImpl implements BoardQuerydsl {
     private EntityManager em;
 
     @Override
-    public List<Board> getBoardList() {
+    public List<Board> findAllApplyFetchJoin() {
         JPAQuery<Board> query = new JPAQuery<>(em);
         return query.select(board)
+                .distinct()
                 .from(board)
-                .join(boardCategory).on(board.boardCategory.eq(boardCategory))
+                .join(board.commentList).fetchJoin()
                 .fetch();
     }
 }
