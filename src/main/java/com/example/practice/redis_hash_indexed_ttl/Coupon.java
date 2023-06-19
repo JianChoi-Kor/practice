@@ -18,6 +18,7 @@ public class Coupon {
 
     @Id
     private String id;
+    @Indexed
     private String name;
     @Indexed
     private String code;
