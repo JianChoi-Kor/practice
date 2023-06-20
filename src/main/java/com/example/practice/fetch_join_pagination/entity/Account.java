@@ -14,7 +14,7 @@ import javax.persistence.*;
 //@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 @NoArgsConstructor
 @Getter
-@Entity
+//@Entity
 public class Account {
 
     @Id

@@ -9,7 +9,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-@Entity
+//@Entity
 public class Comment {
 
     @Id
@@ -17,8 +17,8 @@ public class Comment {
     private Long id;
 
     private String content;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "board_id", nullable = false)
-    private Board board;
+//
+//    @ManyToOne(fetch = FetchType.EAGER)
+//    @JoinColumn(name = "board_id", nullable = false)
+//    private Board board;
 }
