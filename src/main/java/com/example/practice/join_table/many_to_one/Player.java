@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 @Getter
 @Setter
-@Entity
+//@Entity
 public class Player {
 
     @Id
@@ -17,9 +17,9 @@ public class Player {
     @Column(name = "name")
     private String name;
 
-    @ManyToOne(optional = false)
-    @JoinTable(name = "player_grade",
-            joinColumns = @JoinColumn(name = "player_id"),
-            inverseJoinColumns = @JoinColumn(name = "grade_id"))
-    private Grade grade;
+//    @ManyToOne(optional = false)
+//    @JoinTable(name = "player_grade",
+//            joinColumns = @JoinColumn(name = "player_id"),
+//            inverseJoinColumns = @JoinColumn(name = "grade_id"))
+//    private Grade grade;
 }

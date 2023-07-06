@@ -9,7 +9,7 @@ import javax.persistence.Id;
 
 @Getter
 @Setter
-@Entity
+//@Entity
 public class Class {
 
     @Id

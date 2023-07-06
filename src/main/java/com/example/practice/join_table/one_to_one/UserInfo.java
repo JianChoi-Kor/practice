@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 @Getter
 @Setter
-@Entity
+//@Entity
 public class UserInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,6 +17,6 @@ public class UserInfo {
     @Column(name = "address")
     private String address;
 
-    @OneToOne(mappedBy = "userInfo")
-    private User user;
+//    @OneToOne(mappedBy = "userInfo")
+//    private User user;
 }

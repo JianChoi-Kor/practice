@@ -9,7 +9,7 @@ import java.util.List;
 
 @Getter
 @Setter
-@Entity
+//@Entity
 public class Grade {
     @Id
     @Column(name = "grade_id")
@@ -18,6 +18,6 @@ public class Grade {
     @Column(name = "code")
     private String code;
 
-    @OneToMany(mappedBy = "grade")
-    private List<Player> players = new ArrayList<Player>();
+//    @OneToMany(mappedBy = "grade")
+//    private List<Player> players = new ArrayList<Player>();
 }

@@ -9,7 +9,7 @@ import java.util.List;
 
 @Getter
 @Setter
-@Entity
+//@Entity
 public class Student {
 
     @Id
@@ -19,9 +19,9 @@ public class Student {
     @Column(name = "name")
     private String name;
 
-    @ManyToMany
-    @JoinTable(name = "student_class",
-            joinColumns = @JoinColumn(name = "student_id"),
-            inverseJoinColumns = @JoinColumn(name = "class_id"))
-    private List<Class> classes = new ArrayList<Class>();
+//    @ManyToMany
+//    @JoinTable(name = "student_class",
+//            joinColumns = @JoinColumn(name = "student_id"),
+//            inverseJoinColumns = @JoinColumn(name = "class_id"))
+//    private List<Class> classes = new ArrayList<Class>();
 }

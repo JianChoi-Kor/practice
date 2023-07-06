@@ -9,7 +9,7 @@ import java.util.List;
 
 @Getter
 @Setter
-@Entity
+//@Entity
 public class Board {
 
     @Id
@@ -20,9 +20,9 @@ public class Board {
     @Column(name = "title")
     private String title;
 
-    @OneToMany
-    @JoinTable(name = "board_comment",
-            joinColumns = @JoinColumn(name = "board_id"),
-            inverseJoinColumns = @JoinColumn(name = "comment_id"))
-    private List<Comment> comments = new ArrayList<Comment>();
+//    @OneToMany
+//    @JoinTable(name = "board_comment",
+//            joinColumns = @JoinColumn(name = "board_id"),
+//            inverseJoinColumns = @JoinColumn(name = "comment_id"))
+//    private List<Comment> comments = new ArrayList<Comment>();
 }
